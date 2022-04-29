@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title RWD
+    //- Normolize
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    //- Fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet")
+    //- CSS
+    link(rel="stylesheet", href="./index.css")
+  body
+    //- * SVG
+    include ./assets/svg/symbol-defs.svg 
+
+    //- * Header
+    header.header
+        //- Navigation
+        nav.navbar
+            //- Logo
+            a.nav-logo(href="#")
+              svg.icon icon-logo-aloha
+                use(xlink:href="#icon-logo-aloha")
+            //- Menu
+            ul.nav-menu
+              li.nav-item
+                a(href="#").nav-link Projects
+              li.nav-item
+                a(href="#").nav-link About
+              li.nav-item
+                a(href="#").nav-link Blog
+              li.nav-item
+                a(href="#").nav-link Contact
+            //- Burger
+            .hamburger
+              span.bar
+              span.bar
+              span.bar
+  //- Сonnection JS
+  script(src="./index.js") 
+
+
